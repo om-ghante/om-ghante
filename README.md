@@ -2,9 +2,7 @@
 
 ![Profile Banner](https://via.placeholder.com/1000x200.png?text=Welcome+to+Om+Ghante's+GitHub+Profile)
 
-### Hi there! ![Wave](https://media.tenor.com/1J5k8S9mUvkAAAAM/hello-venom.gif =20x20)
-
-
+### Hi there! <img src="https://media.tenor.com/1J5k8S9mUvkAAAAM/hello-venom.gif" alt="Wave" width="20" height="20">
 
 I'm [Om](https://github.com/om-ghante), a Full Stack Developer based in India.
 
