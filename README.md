@@ -1,6 +1,6 @@
 # Om Ghante
 
-![Profile Banner](https://via.placeholder.com/1000x200.png?text=Welcome+to+Om+Ghante's+GitHub+Profile)
+![Profile Banner](./other/github-gif-banner.gif)
 
 ### Hi there! 👋
 
@@ -23,4 +23,3 @@ I'm a passionate software developer with a love for problem-solving, algorithms,
   <a href="https://geeksforgeeks.org">GeeksForGeeks</a>
 </div>
 
----
