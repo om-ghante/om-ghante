@@ -1,5 +1,6 @@
 import React from 'react';
 import avatar from '../assets/avatar.jpg';
+import resume from '../assets/OmGhante.pdf'
 import { 
   Avatar, 
   Typography,
@@ -16,6 +17,20 @@ import {
 } from '@material-tailwind/react';
 
 export default function MyDigitalResume() {
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = resume;
+    link.download = 'OmGhante.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const visitPortfolio = () => {
+    window.open('https://www.google.com/', '_blank');
+  };
+
   return (
     <div className="bg-[#0d1117] text-[#c9d1d9]  text-left">
       {/*Name Card*/}  
@@ -125,87 +140,107 @@ export default function MyDigitalResume() {
           </div>
         </section>
 
+        {/*Technical Skills*/}
+        <section className='mb-8'>
+          <Typography className="text-xl font-semibold mb-2">Technical Skills</Typography>
+          
+        </section>
+
         {/*Projects*/}
         <section className="mb-8">
-          <Typography className="text-xl font-semibold mb-2">Projects</Typography>
+          <Typography className="text-xl font-semibold mb-4">Projects</Typography>
           <div className='mb-4'>
-            <Card className="mt-6 w-full" color='gray'>
+            <div className='w-full border-2 border-[#8b949e] rounded-lg' >
               <CardBody>
                 <Typography variant="h5" className="mb-2 text-[#c9d1d9]">
                   Trip Genius using Gemini API
                 </Typography>
-                <Typography className='mb-1 text-[#c9d1d9]'>
+                <Typography className='mb-1 text-[#8b949e]' variant='lead'>
                   Mongodb, Express.js, React+vite, Node.js | Material-Tailwind | Google Gemini API
                 </Typography>
-                <Typography className='text-[#c9d1d9]'>
+                <Typography className='text-[#8b949e]'>
                   Currently developing a Trip Genius Application using the MERN stack and Google Gemini API for the Gemini API Developer Competition. 
                   This project leverages advanced AI to provide personalized travel recommendations and itineraries, 
                   showcasing my skills in full-stack development and AI integration.
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-                <Button color='white' className='text-sm'>Read More</Button>
+                <Button color='white' variant='outlined'>Read More</Button>
               </CardFooter>
-            </Card>
+            </div>
           </div>
           <div className="mb-4">
-            <Card className="mt-6 w-full" color='gray'>
+            <div className='w-full border-2 border-[#8b949e] rounded-lg' >
               <CardBody>
                 <Typography variant="h5" className="mb-2 text-[#c9d1d9]">
                   Genrative AI using Gemini API
                 </Typography>
-                <Typography className='mb-1 text-[#c9d1d9]'>
+                <Typography className='mb-1 text-[#8b949e]' variant='lead'>
                   Mongodb, Express.js, React+vite, Node.js | Material-Tailwind | Google Gemini API
                 </Typography>
-                <Typography className='text-[#c9d1d9]'>
+                <Typography className='text-[#8b949e]'>
                   Developed a cutting-edge Generative AI application using the Google Gemini API in the MERN stack. 
                   This project highlights my expertise in machine learning and full-stack development, 
                   demonstrating the ability to integrate advanced AI capabilities into practical web applications.
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-                <Button color='white' className='text-sm'>Read More</Button>
+                <Button color='white' variant='outlined'>Read More</Button>
               </CardFooter>
-            </Card>
+            </div>
           </div>
           <div className="mb-4">
-            <Card className="mt-6 w-full" color='gray'>
+            <div className='w-full border-2 border-[#8b949e] rounded-lg' >
               <CardBody>
                 <Typography variant="h5" className="mb-2 text-[#c9d1d9]">
                   Certify Builder
                 </Typography>
-                <Typography className='mb-1 text-[#c9d1d9]'>
+                <Typography className='mb-1 text-[#8b949e]' variant='lead'>
                   Mongodb, Express.js, React+vite, Node.js | Material-Tailwind | Google drive API
                 </Typography>
-                <Typography className='text-[#c9d1d9]'>
+                <Typography className='text-[#8b949e]'>
                   Developed a MERN-based system for efficient certificate generation and management. Administrators enter the necessary details, 
                   which then automatically generate PDFs stored securely on Google Drive. 
                   Certificate links and student emails are maintained for easy access and distribution.
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-                <Button color='white' className='text-sm'>Read More</Button>
+                <Button color='white' variant='outlined'>Read More</Button>
               </CardFooter>
-            </Card>
+            </div>
           </div>
-          <div className=''>
-            <Card className="mt-6 w-full" color='gray'>
+          <div className='mb-4'>
+            <div className='w-full border-2 border-[#8b949e] rounded-lg' >
               <CardBody>
                 <Typography variant="h5" className="mb-2 text-[#c9d1d9]">
                   Mentor Hub
                 </Typography>
-                <Typography className='mb-1 text-[#c9d1d9]'>
+                <Typography className='mb-1 text-[#8b949e]' variant='lead'>
                   React+vite, JavaScript, Saas, Firebase
                 </Typography>
-                <Typography className='text-[#c9d1d9]'>
+                <Typography className='text-[#8b949e]'>
                   Secured the top 5th rank in a hackathon with MentorHub, a platform designed to connect mentors and mentees. Developed using Firebase, 
                   MentorHub facilitates seamless communication, scheduling, and resource sharing, showcasing my ability to create impactful, real-world applications.
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-                <Button color='white' className='text-sm'>Read More</Button>
+                <Button color='white' variant='outlined'>Read More</Button>
               </CardFooter>
-            </Card>
+            </div>
+          </div>
+        </section>
+
+        {/*Redirection*/}
+        <section className='mb-8'>
+          <div className='w-full border-2 border-[#8b949e] rounded-lg' >
+            <div className='flex flex-col md:flex-row justify-center items-center mt-2 mb-2 p-6'>
+              <Typography className='font-semibold text-center md:text-left md:mr-9 mb-4 md:mb-0'>Get My Detailed Resume</Typography>
+              <Button variant='outlined' color='white' className='ml-0 md:ml-9' onClick={downloadResume}>Download</Button>
+            </div>
+            <div className='flex flex-col md:flex-row justify-center items-center mb-2 p-6'>
+              <Button variant='outlined' color='white' className='mr-0 md:mr-9 mb-4 md:mb-0' onClick={visitPortfolio}>Portfolio</Button>
+              <Typography className='font-semibold text-center md:text-left md:ml-9'>Check Out My Projects and Designs</Typography>
+            </div>
           </div>
         </section>
 
