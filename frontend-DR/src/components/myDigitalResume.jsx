@@ -76,7 +76,7 @@ export default function MyDigitalResume() {
                   </Typography>
                 </TimelineHeader>
                 <TimelineBody className="pb-8">
-                  <Typography className="text-sm text-[#8b949e]">BTech in Artificial Intelligence & Machine Learning Bachelor of Technology </Typography>
+                  <Typography className="text-sm text-[#8b949e]">BTech in Artificial Intelligence & Machine Learning</Typography>
                   <Typography className="text-sm text-[#8b949e]">July 2023 - Present</Typography>
                 </TimelineBody>
               </TimelineItem>
