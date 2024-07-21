@@ -8,6 +8,9 @@ module.exports = withMT({
         'custombg': '#10002b',
         'customtext': '#caf0f8',
       },
+      fontFamily: {
+        sans: ["Open Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],

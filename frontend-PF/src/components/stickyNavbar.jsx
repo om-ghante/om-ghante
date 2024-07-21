@@ -12,6 +12,8 @@ import { Outlet } from "react-router-dom";
 import PortfolioLanding from "./portfolioLanding";
 import resume from '../assets/OmGhante.pdf'
 import avatar from "../assets/avatar.jpg";
+import MyIntro from "./myIntro";
+import StickyFooter from "./stickyFooter";
  
 export function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -119,8 +121,14 @@ export function StickyNavbar() {
         </MobileNav>
       </div>
 
-      {/*Portfolio*/}
+      {/*Portfolio Landing*/}
       <PortfolioLanding />
+
+      {/*Intro page*/}
+      <MyIntro />
+
+      {/*Footer*/}
+      <StickyFooter />
 
     </div>
   );
