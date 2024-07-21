@@ -50,7 +50,7 @@ export default function MyDigitalResume() {
         {/*Education*/}
         <section className='mb-8'>
         <Typography className="text-xl font-semibold mb-2">Education</Typography>
-          <div className="w-[32rem] mt-4 ml-5">
+        <div className="w-full md:w-[32rem] mt-4 ml-2 md:ml-5">
             <Timeline>
               <TimelineItem>
                 <TimelineConnector />
@@ -214,13 +214,13 @@ export default function MyDigitalResume() {
         {/*footer*/}
         <footer className="text-center text-[#8b949e] p-4">
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#" className="hover:text-white transition-colors">GitHub</a>
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors">Instagram</a>
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">Facebook</a>
-            <a href="#" className="hover:text-white transition-colors">LeetCode</a>
-            <a href="#" className="hover:text-white transition-colors">HackerRank</a>
+            <a href="https://github.com/om-ghante" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/om-ghante/" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://www.instagram.com/_om_ghante_/" className="hover:text-white transition-colors">Instagram</a>
+            <a href="https://twitter.com/OmGhante/" className="hover:text-white transition-colors">Twitter</a>
+            <a href="https://m.facebook.com/Om-Deepak-Ghante/" className="hover:text-white transition-colors">Facebook</a>
+            <a href="https://leetcode.com/om_ghante/" className="hover:text-white transition-colors">LeetCode</a>
+            <a href="https://www.hackerrank.com/om_ghante" className="hover:text-white transition-colors">HackerRank</a>
             <a href="#" className="hover:text-white transition-colors">HackerEarth</a>
             <a href="#" className="hover:text-white transition-colors">GeeksForGeeks</a>
           </div>

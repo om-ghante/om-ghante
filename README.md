@@ -4,7 +4,7 @@
 
 ### Hi there! 👋
 
-I'm [Om](https://github.com/om-ghante), a Full Stack Developer based in India.
+I'm [Om](https://om-ghante-digital-resume.vercel.app/), a Full Stack Developer based in India.
 
 I'm a passionate software developer with a love for problem-solving, algorithms, and full-stack development. Welcome to my GitHub profile, where you can learn more about me and my journey in the tech world. I am always eager to learn new technologies and frameworks, collaborate with like-minded individuals, and contribute to impactful projects.
 
