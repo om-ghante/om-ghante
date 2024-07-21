@@ -28,7 +28,7 @@ export default function MyDigitalResume() {
   };
 
   const visitPortfolio = () => {
-    window.open('https://www.google.com/', '_blank');
+    window.open('https://om-ghante-portfolio.vercel.app/', '_blank');
   };
 
   return (
@@ -71,7 +71,7 @@ export default function MyDigitalResume() {
                 <TimelineConnector />
                 <TimelineHeader className="h-3">
                 <TimelineIcon color="white" />
-                  <Typography variant="h6" color="custom-gray" className="leading-none">
+                  <Typography variant="h6" color="custom-gray" className="leading-none mb-0 md:mb-0">
                    Sanjay Ghodawat University, Kop.
                   </Typography>
                 </TimelineHeader>
@@ -84,7 +84,7 @@ export default function MyDigitalResume() {
                 <TimelineConnector />
                 <TimelineHeader className="h-3">
                   <TimelineIcon color="white" />
-                  <Typography variant="h6" color="custom-gray" className="leading-none">
+                  <Typography variant="h6" color="custom-gray" className="leading-none mb-2 md:mb-0">
                     D. Y. Patil College of Engineering & Technology (DYPCET), Kop.
                   </Typography>
                 </TimelineHeader>
@@ -97,7 +97,7 @@ export default function MyDigitalResume() {
                 <TimelineConnector />
                 <TimelineHeader className="h-3">
                   <TimelineIcon color="white" />
-                  <Typography variant="h6" color="custom-gray" className="leading-none">
+                  <Typography variant="h6" color="custom-gray" className="leading-none mb-2 md:mb-0">
                     Private High-School & Jr. College, Kop.
                   </Typography>
                 </TimelineHeader>
@@ -110,7 +110,7 @@ export default function MyDigitalResume() {
                 <TimelineConnector />
                 <TimelineHeader className="h-3">
                   <TimelineIcon color="white" />
-                  <Typography variant="h6" color="custom-gray" className="leading-none">
+                  <Typography variant="h6" color="custom-gray" className="leading-none mb-0 md:mb-0">
                     Private High-School, Kop.
                   </Typography>
                 </TimelineHeader>
@@ -142,8 +142,93 @@ export default function MyDigitalResume() {
 
         {/*Technical Skills*/}
         <section className='mb-8'>
-          <Typography className="text-xl font-semibold mb-2">Technical Skills</Typography>
-          
+          <Typography className="text-xl font-semibold mb-4">Technical Skills</Typography>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className='space-y-2'>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                C / C++
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                HTML
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                SQL
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                React / React+vite
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Tailwind
+              </div>
+            </div>
+            <div className='space-y-2'>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Java
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                CSS
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                php
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Node.js
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Material-Tailwind
+              </div>
+            </div>
+            <div className='space-y-2'>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Python
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Javascript
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Bootstarp
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Mongodb
+              </div>
+            </div>
+          </div>
+          <hr className="border-t border-gray-300 my-4 " />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className='space-y-2'>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Git
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Figma
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Google Gemini API
+              </div>
+            </div>
+            <div className='space-y-2'>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Firebase
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                VS code
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Google Cloud
+              </div>
+            </div>
+            <div className='space-y-2'>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Canva
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Google Drive API
+              </div>
+              <div role="button" className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                Amazon Web Services
+              </div>
+            </div>
+          </div>
         </section>
 
         {/*Projects*/}
@@ -237,6 +322,7 @@ export default function MyDigitalResume() {
               <Typography className='font-semibold text-center md:text-left md:mr-9 mb-4 md:mb-0'>Get My Detailed Resume</Typography>
               <Button variant='outlined' color='white' className='ml-0 md:ml-9' onClick={downloadResume}>Download</Button>
             </div>
+            <hr className="border-t border-gray-300 my-4 ml-4 mr-4" />
             <div className='flex flex-col md:flex-row justify-center items-center mb-2 p-6'>
               <Button variant='outlined' color='white' className='mr-0 md:mr-9 mb-4 md:mb-0' onClick={visitPortfolio}>Portfolio</Button>
               <Typography className='font-semibold text-center md:text-left md:ml-9'>Check Out My Projects and Designs</Typography>
