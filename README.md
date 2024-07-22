@@ -20,6 +20,6 @@ I'm a passionate software developer with a love for problem-solving, algorithms,
   <a href="https://leetcode.com/om_ghante/">LeetCode</a> |
   <a href="https://www.hackerrank.com/profile/omghante">HackerRank</a> |
   <a href="https://www.hackerearth.com/@omghante">HackerEarth</a> |
-  <a href="https://geeksforgeeks.org">GeeksForGeeks</a>
+  <a href="https://www.geeksforgeeks.org/user/omghante/">GeeksForGeeks</a>
 </div>
 
