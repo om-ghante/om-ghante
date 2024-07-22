@@ -341,8 +341,8 @@ export default function MyDigitalResume() {
             <a href="https://twitter.com/OmGhante/" className="hover:text-white transition-colors">Twitter</a>
             <a href="https://m.facebook.com/Om-Deepak-Ghante/" className="hover:text-white transition-colors">Facebook</a>
             <a href="https://leetcode.com/om_ghante/" className="hover:text-white transition-colors">LeetCode</a>
-            <a href="https://www.hackerrank.com/om_ghante" className="hover:text-white transition-colors">HackerRank</a>
-            <a href="#" className="hover:text-white transition-colors">HackerEarth</a>
+            <a href="https://www.hackerrank.com/profile/omghante" className="hover:text-white transition-colors">HackerRank</a>
+            <a href="https://www.hackerearth.com/@omghante" className="hover:text-white transition-colors">HackerEarth</a>
             <a href="#" className="hover:text-white transition-colors">GeeksForGeeks</a>
           </div>
         </footer>

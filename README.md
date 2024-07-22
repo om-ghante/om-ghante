@@ -17,9 +17,9 @@ I'm a passionate software developer with a love for problem-solving, algorithms,
 # 
 
 <div align="center">
-  <a href="https://leetcode.com">LeetCode</a> |
-  <a href="https://hackerrank.com">HackerRank</a> |
-  <a href="https://hackerearth.com">HackerEarth</a> |
+  <a href="https://leetcode.com/om_ghante/">LeetCode</a> |
+  <a href="https://www.hackerrank.com/profile/omghante">HackerRank</a> |
+  <a href="https://www.hackerearth.com/@omghante">HackerEarth</a> |
   <a href="https://geeksforgeeks.org">GeeksForGeeks</a>
 </div>
 
