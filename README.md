@@ -23,3 +23,11 @@ I'm a passionate software developer with a love for problem-solving, algorithms,
   <a href="https://www.geeksforgeeks.org/user/omghante/">GeeksForGeeks</a>
 </div>
 
+
+<script
+  src="https://widget.galichat.com/gali-embeded.min.js" 
+  chat-hash="tn3nk3znddsbgc3ksvuph5" 
+  defer>
+</script>
+    
+
