@@ -1,6 +1,6 @@
 # Om Ghante
 
-![Profile Banner](./other/github-gif-banner.gif)
+![Profile Banner](./other/github-gif-banner2.gif)
 
 ### Hi there! 👋
 
