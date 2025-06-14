@@ -21,9 +21,12 @@ Thanks for stopping by! Let’s create something amazing together. 🚀
 # 
 
 <div align="center">
-  <a href="https://leetcode.com/om_ghante/">LeetCode</a> |
-  <a href="https://www.hackerrank.com/profile/omghante">HackerRank</a> |
-  <a href="https://www.hackerearth.com/@omghante">HackerEarth</a> |
-  <a href="https://www.geeksforgeeks.org/user/omghante/">GeeksForGeeks</a>
+  <a href="https://leetcode.com/om-ghante/">LeetCode</a> |
+  <a href="https://www.hackerrank.com/om_ghante/">HackerRank</a> |
+  <a href="https://www.hackerearth.com/@om-ghante/">HackerEarth</a> |
+  <a href="https://www.geeksforgeeks.org/user/omghante/">GeeksForGeeks</a> |
+  <a href="https://huggingface.co/om-ghante/">Hugging Face</a> |
+  <a href="https://www.kaggle.com/omghante/">Kaggle</a> |
+  <a href="https://github.com/om-ghante/">GitHub</a>
 </div>
     
