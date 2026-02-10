@@ -1,0 +1,504 @@
+{
+  "hero": {
+    "name": "Om Ghante",
+    "roles": [
+      "Software Developer",
+      "AI Developer",
+      "Full Stack Developer"
+    ],
+    "description": "Building scalable, high-performance web applications and intelligent systems that solve real-world problems with elegant code. I love building algorithms to solve complex problems and designing robust ecosystems.",
+    "socialLinks": {
+      "github": "https://github.com/om-ghante",
+      "linkedin": "https://www.linkedin.com/in/om-ghante/",
+      "twitter": "https://x.com/OmGhante",
+      "email": "mailto:mr.omghante1@gmail.com"
+    }
+  },
+  "experience": [
+    {
+      "id": 1,
+      "title": "Software Engineer Intern",
+      "organization": "CurlShell Private Limited",
+      "duration": "Jan 2026 - Present",
+      "description": "Internship at CurlShell. Pune, Maharashtra, India (Hybrid).",
+      "technologies": [
+        "React",
+        "Python",
+        "AWS",
+        "Docker"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Founder",
+      "organization": "Prismas",
+      "duration": "Apr 2025 - Present",
+      "description": "Full-time Founder at Prismas Private Limited. Kolhapur, Maharashtra, India (Hybrid).",
+      "technologies": [
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Software Developer",
+      "organization": "Synfuse",
+      "duration": "Jan 2023 - Dec 2024",
+      "description": "Freelance Software Developer at Synfuse. Kolhapur, Maharashtra, India (Remote).",
+      "technologies": [
+        "React Native",
+        "Firebase",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Intern",
+      "organization": "Anthaathi Private Limited",
+      "duration": "Aug 2022 - Oct 2022",
+      "description": "Internship at Anthaathi Private Limited. Kolhapur, Maharashtra, India (On-site).",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "title": "BCSI Bachelor Of Computer Science (Hons), Computer Engineering",
+      "organization": "INTI",
+      "duration": "Jul 2025 – Present",
+      "description": "Student at INTI International University. Nilai, Malaysia (Hybrid).",
+      "post": "Student"
+    },
+    {
+      "id": 2,
+      "title": "BTech, Artificial Intelligence & Machine Learning",
+      "organization": "Sanjay Ghodawat University",
+      "duration": "Jul 2023 – Jun 2026",
+      "description": "Student at Sanjay Ghodawat University. Kolhapur, Maharashtra, India (On-site).",
+      "post": "Student"
+    },
+    {
+      "id": 3,
+      "title": "Diploma, Computer Engineering",
+      "organization": "D. Y. Patil College of Engineering & Technology (DYPCET)",
+      "duration": "Jul 2021 – Jun 2023",
+      "description": "Student at D. Y. Patil College of Engineering & Technology. Kolhapur, Maharashtra, India (On-site).",
+      "post": "Student"
+    },
+    {
+      "id": 4,
+      "title": "12th, HSC",
+      "organization": "Private High School and Junior College",
+      "duration": "Apr 2020 – Feb 2021",
+      "description": "Student at Private High School and Junior College. Kolhapur, Maharashtra, India (On-site).",
+      "post": "Student"
+    },
+    {
+      "id": 5,
+      "title": "10th, SSC",
+      "organization": "Private High School",
+      "duration": "May 2018 – Mar 2019",
+      "description": "Student at Private High School. Kolhapur, Maharashtra, India (On-site).",
+      "post": "Student"
+    }
+  ],
+  "skills": {
+    "title": "Technical Proficiency",
+    "advancedTitle": "Advanced",
+    "intermediateTitle": "Intermediate",
+    "advanced": [
+      "Java",
+      "JavaScript",
+      "Python",
+      "TypeScript",
+      "MERN Stack",
+      "Next.js",
+      "Tailwind CSS",
+      "Git",
+      "Ubuntu",
+      "Docker"
+    ],
+    "intermediate": [
+      "Go",
+      "Ruby",
+      "Dropwizard",
+      "PostgreSQL",
+      "PHP"
+    ]
+  },
+  "experienceEducation": {
+    "title": "Mapping My Journey",
+    "experienceTab": "Experience",
+    "educationTab": "Education"
+  },
+  "projects": {
+    "title": "Turning Ideas into Reality",
+    "tabs": [
+      {
+        "id": "website",
+        "label": "Websites"
+      },
+      {
+        "id": "mobile",
+        "label": "Mobile Apps"
+      },
+      {
+        "id": "ai",
+        "label": "AI Projects"
+      },
+      {
+        "id": "library",
+        "label": "Libraries"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "EcoShop",
+        "description": "Sustainable e-commerce platform with real-time analytics.",
+        "category": "website",
+        "techStack": [
+          "Next.js",
+          "Tailwind",
+          "PostgreSQL"
+        ],
+        "imageUrl": "/ecoshop.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 2,
+        "title": "DevBlog",
+        "description": "Modern blog CMS for developers with markdown support.",
+        "category": "website",
+        "techStack": [
+          "React",
+          "GraphQL",
+          "Apollo"
+        ],
+        "imageUrl": "/devblog.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 3,
+        "title": "TaskMaster",
+        "description": "Collaborative project management tool for remote teams.",
+        "category": "website",
+        "techStack": [
+          "Vue.js",
+          "Firebase",
+          "Pinia"
+        ],
+        "imageUrl": "/taskmaster.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 4,
+        "title": "Portfolio v1",
+        "description": "First iteration of personal portfolio with custom animations.",
+        "category": "website",
+        "techStack": [
+          "HTML",
+          "SCSS",
+          "JS"
+        ],
+        "imageUrl": "/web-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 17,
+        "title": "LmsPlatform",
+        "description": "Learning management system for schools.",
+        "category": "website",
+        "techStack": [
+          "Moodle",
+          "PHP",
+          "MySQL"
+        ],
+        "imageUrl": "/web-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 18,
+        "title": "SocialConnect",
+        "description": "Social networking app for professionals.",
+        "category": "website",
+        "techStack": [
+          "Django",
+          "Python",
+          "Redis"
+        ],
+        "imageUrl": "/web-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 19,
+        "title": "NewsFeed",
+        "description": "Real-time news aggregator with personalized feed.",
+        "category": "website",
+        "techStack": [
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ],
+        "imageUrl": "/web-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 20,
+        "title": "JobRemote",
+        "description": "Job board for remote opportunities.",
+        "category": "website",
+        "techStack": [
+          "Ruby on Rails",
+          "PostgreSQL"
+        ],
+        "imageUrl": "/web-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 21,
+        "title": "RecipeFinder",
+        "description": "Search engine for finding recipes by ingredients.",
+        "category": "website",
+        "techStack": [
+          "Vue.js",
+          "Nuxt",
+          "API"
+        ],
+        "imageUrl": "/web-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 22,
+        "title": "EventPlanner",
+        "description": "Event management platform with ticketing system.",
+        "category": "website",
+        "techStack": [
+          "Next.js",
+          "Stripe",
+          "Prisma"
+        ],
+        "imageUrl": "/web-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 5,
+        "title": "FitTrack",
+        "description": "Fitness tracking app with workout plans and progress charts.",
+        "category": "mobile",
+        "techStack": [
+          "React Native",
+          "Redux",
+          "Node.js"
+        ],
+        "imageUrl": "/mobile-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 6,
+        "title": "TravelBuddy",
+        "description": "Travel companion app for itinerary planning and booking.",
+        "category": "mobile",
+        "techStack": [
+          "Flutter",
+          "Dart",
+          "Firebase"
+        ],
+        "imageUrl": "/mobile-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 7,
+        "title": "CryptoWallet",
+        "description": "Secure mobile wallet for managing cryptocurrency assets.",
+        "category": "mobile",
+        "techStack": [
+          "Swift",
+          "iOS",
+          "CryptoKit"
+        ],
+        "imageUrl": "/mobile-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 8,
+        "title": "FoodDelivery",
+        "description": "On-demand food delivery app with real-time tracking.",
+        "category": "mobile",
+        "techStack": [
+          "Kotlin",
+          "Android",
+          "Google Maps API"
+        ],
+        "imageUrl": "/mobile-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 23,
+        "title": "MeditationApp",
+        "description": "App for guided meditation and sleep sounds.",
+        "category": "mobile",
+        "techStack": [
+          "React Native",
+          "Expo"
+        ],
+        "imageUrl": "/mobile-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 24,
+        "title": "BudgetManager",
+        "description": "Simple app to track daily expenses.",
+        "category": "mobile",
+        "techStack": [
+          "Flutter",
+          "SQLite"
+        ],
+        "imageUrl": "/mobile-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 25,
+        "title": "LearnLang",
+        "description": "Gamified language learning application.",
+        "category": "mobile",
+        "techStack": [
+          "Swift",
+          "CoreData"
+        ],
+        "imageUrl": "/mobile-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 9,
+        "title": "ChatBot AI",
+        "description": "Intelligent chatbot for customer support automation.",
+        "category": "ai",
+        "techStack": [
+          "Python",
+          "TensorFlow",
+          "NLP"
+        ],
+        "imageUrl": "/ai-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 10,
+        "title": "ImageGen",
+        "description": "GAN-based image generation tool for creative design.",
+        "category": "ai",
+        "techStack": [
+          "PyTorch",
+          "OpenCV",
+          "Flask"
+        ],
+        "imageUrl": "/ai-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 11,
+        "title": "SentimentAnalyst",
+        "description": "Social media sentiment analysis dashboard.",
+        "category": "ai",
+        "techStack": [
+          "Scikit-learn",
+          "Pandas",
+          "D3.js"
+        ],
+        "imageUrl": "/ai-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 12,
+        "title": "RecSys",
+        "description": "Personalized recommendation engine for e-commerce.",
+        "category": "ai",
+        "techStack": [
+          "Spark",
+          "Hadoop",
+          "Scala"
+        ],
+        "imageUrl": "/ai-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 26,
+        "title": "StockAI",
+        "description": "Stock market prediction using LSTM models.",
+        "category": "ai",
+        "techStack": [
+          "Python",
+          "Keras",
+          "LSTM"
+        ],
+        "imageUrl": "/ai-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 13,
+        "title": "React-UI-Kit",
+        "description": "Lightweight React UI component library.",
+        "category": "library",
+        "techStack": [
+          "React",
+          "TypeScript",
+          "Rollup"
+        ],
+        "imageUrl": "/library-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "id": 14,
+        "title": "Utils-JS",
+        "description": "Collection of utility functions for modern JS apps.",
+        "category": "library",
+        "techStack": [
+          "JavaScript",
+          "Jest",
+          "NPM"
+        ],
+        "imageUrl": "/library-project.png",
+        "demoUrl": "#",
+        "repoUrl": "#"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "I'm currently open to new opportunities and collaborations. Feel free to reach out if you have a question or just want to say hi!",
+    "emailText": "Send me an Email"
+  },
+  "about": {
+    "title": "The Developer Behind the Code",
+    "description": "I serve a deep passion for creating smart, autonomous systems that drive efficiency. What started as building simple websites has evolved into a focused mission: designing intelligent AI agents and interconnected digital ecosystems that solve complex real-world problems. I thrive on exploring emerging technologies and leveraging the latest tools to build solutions that are not only powerful but also intuitive and helpful for everyone.<br><br>Beyond my full-time role, I’m building real-world tools for early-stage and small businesses at my startup, <a href='https://prismas.in' target='_blank' rel='noopener noreferrer' class='text-sky-600 font-medium hover:underline'>prismas.in</a>.<br>Prismas is the very first node of my dream; there is a big tree behind it."
+  }
+}
