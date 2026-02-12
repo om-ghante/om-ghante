@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -25,11 +26,13 @@ const MermaidRenderer = ({ chart }: { chart: string }) => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        mermaid.initialize({
-            startOnLoad: false,
-            securityLevel: 'loose',
-            theme: 'default'
-        });
+        if (typeof window !== 'undefined') {
+            mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: 'default'
+            });
+        }
     }, []);
 
     useEffect(() => {
@@ -39,7 +42,8 @@ const MermaidRenderer = ({ chart }: { chart: string }) => {
             try {
                 const id = 'mermaid-' + Math.random().toString(36).slice(2);
 
-                let fixedChart = chart.replace(/\[((?:[^"\]\n]*?[=*\/()%&-][^"\]\n]*?))\]/g, (match, content) => {
+                let fixedChart = chart;
+                fixedChart = fixedChart.replace(/\[((?:[^"\]\n]*?[=*\/()%&-][^"\]\n]*?))\]/g, (match, content) => {
                     if (content.trim().startsWith('"')) return match;
                     return `["${content}"]`;
                 });
@@ -464,7 +468,7 @@ export default function ProblemsViewer() {
               ">
 
                             <ReactMarkdown
-                                remarkPlugins={[remarkGfm]}
+                                remarkPlugins={[remarkGfm, remarkBreaks]}
                                 rehypePlugins={[rehypeRaw]}
                                 components={{
                                     h1: ({ children }) => <h1 className="text-4xl font-extrabold text-gray-900 mt-10 mb-6 pb-4 border-b border-gray-200">{children}</h1>,
@@ -533,19 +537,27 @@ export default function ProblemsViewer() {
                                     code({ node, className, children, ...props }) {
                                         const match = /language-(\w+)/.exec(className || '');
                                         const codeString = String(children).replace(/\n$/, '');
-                                        if ((match && match[1] === 'mermaid') || codeString.trim().startsWith('flowchart') || codeString.trim().startsWith('graph') || codeString.trim().startsWith('sequenceDiagram') || codeString.trim().startsWith('classDiagram')) {
+
+                                        // Enhanced Mermaid Detection
+                                        const isMermaid =
+                                            (match && match[1] === 'mermaid') ||
+                                            ['graph', 'flowchart', 'sequenceDiagram', 'classDiagram', 'stateDiagram', 'erDiagram', 'pie', 'gantt', 'journey', 'gitGraph'].some(k => codeString.trim().startsWith(k));
+
+                                        if (isMermaid) {
                                             return <MermaidRenderer chart={codeString} />;
                                         }
+
                                         return match ? (
-                                            <SyntaxHighlighter
-                                                // @ts-expect-error - style type mismatch
-                                                style={vscDarkPlus}
-                                                language={match[1]}
-                                                PreTag="div"
-                                                customStyle={{ margin: 0, padding: '1.5rem', borderRadius: '0.5rem', fontSize: '0.9rem', lineHeight: 1.5 }}
-                                            >
-                                                {codeString}
-                                            </SyntaxHighlighter>
+                                            <div className="relative rounded-lg overflow-hidden my-6 border border-gray-200 not-prose">
+                                                <SyntaxHighlighter
+                                                    style={vscDarkPlus}
+                                                    language={match[1]}
+                                                    PreTag="div"
+                                                    customStyle={{ margin: 0, padding: '1.5rem', fontSize: '0.9rem', lineHeight: 1.5 }}
+                                                >
+                                                    {codeString}
+                                                </SyntaxHighlighter>
+                                            </div>
                                         ) : (
                                             <code className="font-mono text-sm bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded" {...props}>
                                                 {children}
