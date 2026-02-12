@@ -152,11 +152,19 @@ interface CommitLog {
     url: string;
 }
 
-const GITHUB_OWNER = 'om-ghante';
-const GITHUB_REPO = 'easy-problems';
-const GITHUB_BRANCH = 'main';
+interface RepoViewerProps {
+    owner?: string;
+    repo?: string;
+    branch?: string;
+    title?: string;
+}
 
-export default function ProblemsViewer() {
+export default function RepoViewer({
+    owner = 'om-ghante',
+    repo = 'easy-problems',
+    branch = 'main',
+    title = 'Problems'
+}: RepoViewerProps) {
     const [sections, setSections] = useState<Section[]>([]);
     const [rootReadme, setRootReadme] = useState<{ name: string, lastModified?: string } | null>(null);
     const [selected, setSelected] = useState<Selection | null>(null);
@@ -226,7 +234,7 @@ export default function ProblemsViewer() {
             setLoadingList(true);
 
             const treeResponse = await fetch(
-                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/trees/${GITHUB_BRANCH}?recursive=1`
+                `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`
             );
 
             if (!treeResponse.ok) {
@@ -238,7 +246,7 @@ export default function ProblemsViewer() {
             const allFiles = treeData.tree;
 
             const commitsResponse = await fetch(
-                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits?per_page=50`
+                `https://api.github.com/repos/${owner}/${repo}/commits?per_page=50`
             );
 
             let fetchedCommits: CommitLog[] = [];
@@ -330,7 +338,7 @@ export default function ProblemsViewer() {
                 ? `${selected.folder}/${selected.file}`
                 : selected.file;
 
-            const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}?t=${Date.now()}`;
+            const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}?t=${Date.now()}`;
 
             const response = await fetch(url);
 
@@ -409,7 +417,7 @@ export default function ProblemsViewer() {
                     {isSidebarOpen && (
                         <h2 className="text-lg font-bold tracking-tight text-gray-900 flex items-center gap-2">
                             <Folder size={18} className="text-blue-600" />
-                            Problems
+                            {title}
                         </h2>
                     )}
                     <button

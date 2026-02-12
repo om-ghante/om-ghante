@@ -1,10 +1,10 @@
 import RepoViewer from '../components/RepoViewer';
 
-export default function ProblemsPage() {
+export default function DocsPage() {
     return (
         <RepoViewer
-            repo="easy-problems"
-            title="Problems"
+            repo="easy-docs"
+            title="Documentation"
             branch="main"
             owner="om-ghante"
         />
