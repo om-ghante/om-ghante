@@ -11,20 +11,16 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import mermaid from 'mermaid';
 import {
     ChevronDown,
-    ChevronUp,
     Loader2,
     AlertCircle,
     Code2
 } from 'lucide-react';
 
-// --- Types ---
 interface ProblemContent {
     raw: string;
-    // Tags are parsed from the content or metadata
     tags?: string[];
 }
 
-// --- Helper Functions ---
 const extractText = (nodes: any): string => {
     if (!nodes) return '';
     if (typeof nodes === 'string') return nodes;
@@ -33,9 +29,6 @@ const extractText = (nodes: any): string => {
     return '';
 };
 
-// --- Components ---
-
-// Mermaid Renderer with Sanitation
 const MermaidDiagram = ({ chart }: { chart: string }) => {
     const ref = useRef<HTMLDivElement>(null);
     const [error, setError] = useState(false);
@@ -58,7 +51,6 @@ const MermaidDiagram = ({ chart }: { chart: string }) => {
             try {
                 const id = `mermaid-${Math.random().toString(36).substring(2, 9)}`;
 
-                // Sanitation Logic (matches ProblemsViewer)
                 let fixedChart = chart;
                 fixedChart = fixedChart.replace(/\[((?:[^"\]\n]*?[=*\/()%&-][^"\]\n]*?))\]/g, (match, content) => {
                     if (content.trim().startsWith('"')) return match;
@@ -100,17 +92,14 @@ const MermaidDiagram = ({ chart }: { chart: string }) => {
         );
     }
 
-
-
     return (
         <div
             ref={ref}
-            className="flex justify-center p-6 bg-white rounded-lg border border-gray-100 my-6 overflow-x-auto not-prose"
+            className="flex justify-center bg-white w-full p-4 my-6 overflow-x-auto not-prose"
         />
     );
 };
 
-// Details/Summary Renderer
 const DetailsRenderer = ({ children, ...props }: any) => (
     <details
         className="group my-6 border border-blue-100 rounded-lg overflow-hidden bg-white open:bg-blue-50/10 not-prose"
@@ -133,7 +122,6 @@ const SummaryRenderer = ({ children, ...props }: any) => (
     </summary>
 );
 
-// Main Content Viewer
 function ProblemViewer() {
     const searchParams = useSearchParams();
     const setId = searchParams.get('set');
@@ -141,7 +129,6 @@ function ProblemViewer() {
     const [content, setContent] = useState<ProblemContent | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-
 
     useEffect(() => {
         if (!setId) {
@@ -154,20 +141,13 @@ function ProblemViewer() {
             setLoading(true);
             setError(null);
             try {
-                // Determine if fetch URL should be local or from GitHub 
-                // Creating a generic fetcher that works with the existing logic
                 const res = await fetch(`/content/${setId}.md`);
 
-
                 if (!res.ok) {
-
                     throw new Error("Failed to load problem content.");
                 }
 
                 const text = await res.text();
-                // Simple tag extraction if present in the raw markdown text as "Tags: ..."
-                // Note: The rendering logic below also handles inline "Tags:" paragraphs.
-                // We'll just pass the raw text and let the renderer handle extraction for display.
                 setContent({ raw: text });
 
             } catch (err) {
@@ -225,9 +205,6 @@ function ProblemViewer() {
     return (
         <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-4xl mx-auto">
-
-
-                {/* Content Card */}
                 <div className="bg-white rounded-xl border border-gray-200 p-6 md:p-10 overflow-hidden">
                     <article className="prose prose-slate max-w-none 
                         prose-headings:text-gray-900 
@@ -238,12 +215,11 @@ function ProblemViewer() {
                         prose-li:text-gray-700
                         prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
                         prose-code:text-pink-600 prose-code:bg-pink-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm prose-code:font-mono prose-code:before:content-none prose-code:after:content-none
-                        prose-pre:bg-gray-900 prose-pre:p-0 prose-pre:text-sm 
+                        prose-pre:bg-transparent prose-pre:p-0 prose-pre:text-sm 
                         prose-pre:shadow-none prose-pre:rounded-lg prose-pre:my-8
                         prose-strong:font-bold prose-strong:text-gray-900
                     ">
                         <ReactMarkdown
-
                             remarkPlugins={[remarkGfm, remarkBreaks]}
                             rehypePlugins={[rehypeRaw]}
                             components={{
@@ -254,26 +230,23 @@ function ProblemViewer() {
                                 p: ({ children }) => {
                                     const text = extractText(children).trim();
 
-                                    // 1. Title Heuristic
                                     if (/^\d+\s+[A-Za-z]/.test(text) && text.length < 100 && !text.includes('.')) {
                                         return <h1 className="text-3xl font-extrabold text-gray-900 mt-10 mb-6 pb-4 border-b border-gray-200">{children}</h1>;
                                     }
 
-                                    // 2. Section Headers
                                     const sectionHeaders = ['Problem Description', 'Flowchart', 'Test Cases', 'Input', 'Output', 'Constraints', 'Algorithm', 'Explanation', 'Solution'];
                                     const isHeader = sectionHeaders.some(h => text.toLowerCase() === h.toLowerCase() || text.toLowerCase() === h.toLowerCase() + ':');
                                     if (isHeader) {
                                         return <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4 flex items-center gap-2 border-l-4 border-blue-500 pl-3 bg-gray-50 py-1 rounded-r">{children}</h3>;
                                     }
 
-                                    // 3. Tags
                                     if (text.toLowerCase().startsWith('tag:') || text.toLowerCase().startsWith('tags:')) {
                                         const tags = text.replace(/^Tags?:\s*/i, '').split(',');
                                         return (
                                             <div className="flex flex-wrap gap-2 mb-8">
                                                 {tags.map(tag => {
                                                     const t = tag.trim().toLowerCase();
-                                                    let colorClass = 'bg-blue-100 text-blue-700'; // Default
+                                                    let colorClass = 'bg-blue-100 text-blue-700';
                                                     if (t.includes('beginner') || t.includes('easy')) colorClass = 'bg-yellow-100 text-yellow-800';
                                                     else if (t.includes('intermediate') || t.includes('medium')) colorClass = 'bg-green-100 text-green-700';
                                                     else if (t.includes('advanced') || t.includes('hard')) colorClass = 'bg-red-100 text-red-700';
@@ -288,7 +261,6 @@ function ProblemViewer() {
                                         );
                                     }
 
-                                    // 4. Test Cases
                                     if (isTestCaseBlock(text)) {
                                         return renderTestCase(children);
                                     }
@@ -308,7 +280,6 @@ function ProblemViewer() {
                                     const match = /language-(\w+)/.exec(className || '');
                                     const contentStr = String(children).replace(/\n$/, '');
 
-                                    // Mermaid Detection
                                     const isMermaid =
                                         (match && match[1] === 'mermaid') ||
                                         ['graph', 'flowchart', 'sequenceDiagram', 'classDiagram', 'stateDiagram', 'erDiagram', 'pie', 'gantt', 'journey', 'gitGraph'].some(k => contentStr.trim().startsWith(k));
@@ -320,14 +291,11 @@ function ProblemViewer() {
                                     return match ? (
                                         <div className="relative group rounded-lg overflow-hidden my-6 border border-gray-200 not-prose">
                                             <SyntaxHighlighter
-
                                                 style={vscDarkPlus}
                                                 language={match[1]}
                                                 PreTag="div"
                                                 customStyle={{ margin: 0, padding: '1.5rem', fontSize: '0.9rem', lineHeight: '1.6' }}
-
                                             >
-
                                                 {contentStr}
                                             </SyntaxHighlighter>
                                         </div>
@@ -345,13 +313,10 @@ function ProblemViewer() {
                         </ReactMarkdown>
                     </article>
                 </div>
-
-
             </div>
         </div>
     );
 }
-
 
 export default function ProblemPage() {
     return (
